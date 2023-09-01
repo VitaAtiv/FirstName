@@ -44,6 +44,13 @@ img {
   } 
    */
 
+   form {
+    padding: 20px;
+   }
+
+   .text-field {
+    border: 1px solid #000;
+   }
 
    .box {
     margin-left: 50px;
