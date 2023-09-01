@@ -45,11 +45,13 @@ img {
    */
 
    form {
+    
     padding: 20px;
    }
 
    .text-field {
     position: relative;
+    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #000;
     border-radius: 10px;
@@ -59,7 +61,12 @@ img {
     position: absolute;
     top: 50%;
     left: 13px;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
     transform: translateY(-50%);
+    transition: top 100ms ease-in, font-size 100ms ease-in, color 100ms ease-in;
    }
 
    .text-field-input {
@@ -67,6 +74,13 @@ img {
     border: none;
     outline: none;
    }
+
+   .text-field-input:not(:placeholder-shown) + .text-field-label {
+    top: 0;
+    font-size: 10px;  
+    color: #5e5d5d; 
+   }
+
 
    .box {
     margin-left: 50px;
