@@ -64,7 +64,7 @@ img {
     left: 13px;
     padding: 0 5px;
     font-size: 16px;
-    color: #000;
+    color: #5e5d5d;
     background-color: #fff;
     transform: translateY(-50%);
     transition: top 100ms ease-in, font-size 100ms ease-in, color 100ms ease-in;
@@ -79,7 +79,7 @@ img {
    .text-place-input:not(:placeholder-shown) + .text-place-label {
     top: 0;
     font-size: 10px;  
-    color: #5e5d5d; 
+    color: #bcbcbc; 
    }
 
 
@@ -87,34 +87,46 @@ img {
 
    .text-field {
     position: relative;
-    margin-bottom: 20px;
+    
+    /* margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #000;
-    border-radius: 10px;
+    border-radius: 10px; */
    }
 
    .text-field-label {
     position: absolute;
-    top: 50%;
+     top: 50%;
     left: 13px;
-    padding: 0 5px;
-    font-size: 16px;
-    color: #000;
-    background-color: #fff;
     transform: translateY(-50%);
-    transition: top 100ms ease-in, font-size 100ms ease-in, color 100ms ease-in;
+   padding: 0 5px;
+    font-size: 16px;
+    color: #5e5d5d;
+    background-color: #fff;
+    
+    transition: top 100ms ease-in, font-size 100ms ease-in, color 100ms ease-in; 
    }
 
    .text-field-input {
     width: 100%;
-    border: none;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
     outline: none;
+   }
+
+   .text-field-input:invalid {
+    border: 1px solid tomato;
+   }
+
+   .text-field-input:valid {
+    border: 1px solid green;
    }
 
    .text-field-input:not(:placeholder-shown) + .text-field-label {
     top: 0;
     font-size: 10px;  
-    color: #5e5d5d; 
+    color: #bcbcbc;  
    }
 
 
@@ -122,6 +134,7 @@ img {
     margin-left: 50px;
     margin-top: 30px;
     width: 500px;
+    padding: 10px;
     border: 1px solid #000;
   }
 
