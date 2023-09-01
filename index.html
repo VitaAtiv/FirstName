@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FirsName</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-5"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="./css/resept.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <button class="btn-open" type="button" data-modal-open>Open Modal</button>
+    <form class="box">
+      <label class="box-policy">
+        <input class="input-policy" type="checkbox" />
+        <span></span>
+        <svg class="input-policy-icon">
+          <use href="./img/plus.svg#icon-plus"></use>
+        </svg>
+        Agree
+      </label>
+      <input class="input-level" type="checkbox" />
+      <input class="input-level" type="checkbox" />
+      <input class="input-level" type="checkbox" />
+      <br />
+      <label for="age">Age</label>
+      <input
+        id="age"
+        class="input-age"
+        type="number"
+        min="1"
+        max="150"
+        required
+      />
+      <br />
+      <label for="age">Age</label>
+      <input id="age" class="input-age" type="range" min="1" max="150" />
+      <br />
+      <label for="name">Name</label>
+      <input
+        id="name"
+        class="input-name"
+        type="text"
+        minlength="6"
+        maxlength="8"
+        required
+      />
+      <br />
+      <label>
+        <input type="radio" name="level" value="1" />
+        1
+      </label>
+      <label>
+        <input type="radio" name="level" value="2" />
+        2
+      </label>
+      <label>
+        <input type="radio" name="level" value="3" />
+        3
+      </label>
+      <button type="submit">Send</button>
+    </form>
+
+    
+    <div class="back-modal is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-close" type="button" data-modal-close>X</button>
+        <div class="modal-selection">
+          <button class="modal-selection-btn" type="button">Вхід</button>
+          <button class="modal-selection-btn" type="button">Реєстрація</button>
+        </div>
+        <label class="modal-label email">
+          <span>E-mail</span>
+          <input
+            class="modal-input"
+            type="email"
+            placeholder="ativ181@gmail.com"
+          />
+          <svg class="modal-input-icon email">
+            <use href="./img/icons.svg#icon-email"></use>
+          </svg>
+        </label>
+        <label class="modal-label password">
+          <span>Password</span>
+          <input class="modal-input" type="password" placeholder="12345678" />
+          <svg class="modal-input-icon password">
+            <use href="./img/icons.svg#icon-password"></use>
+          </svg>
+        </label>
+
+        <label class="modal-memory">
+          <input class="modal-memory-input" type="checkbox" />
+          <span>Запам'ятати мене</span>
+        </label>
+
+        <button class="modal-selection-btn-input" type="button">Увійти</button>
+
+        <label class="modal-selection-btn-pass">
+          <input class="modal-selection-btn-pass-input" type="email" />
+          <p>Забули пароль?</p>
+        </label>
+
+        <!-- <button class="modal-selection-btn-pass" type="button">Забули пароль?</button> -->
+
+        <!-- <a class="modal-selection-btn-google"
+          href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AXo7B7WloQSfflsvIVDPGceEOS_xiY2ysyM3YpkcE2wQMNIURGawI6NwYomlTlpQYzOgUBt1ee8m&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1693877058%3A1692964949135302"
+        >Продовжити з Google</a> -->
+
+        <button class="modal-selection-btn-google" type="button">
+          Продовжити з Google
+        </button>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
