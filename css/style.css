@@ -49,7 +49,23 @@ img {
    }
 
    .text-field {
+    position: relative;
+    padding: 10px;
     border: 1px solid #000;
+    border-radius: 10px;
+   }
+
+   .text-field-label {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+   }
+
+   .text-field-input {
+    width: 100%;
+    border: none;
+    outline: none;
    }
 
    .box {
