@@ -53,9 +53,9 @@ img {
    .text-place {
     position: relative;
     margin-bottom: 20px;
-    padding: 10px;
+    /* padding: 10px;
     border: 1px solid #000;
-    border-radius: 10px;
+    border-radius: 10px; */
    }
 
    .text-place-label {
@@ -72,7 +72,9 @@ img {
 
    .text-place-input {
     width: 100%;
-    border: none;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
     outline: none;
    }
 
@@ -82,14 +84,32 @@ img {
     color: #bcbcbc; 
    }
 
+   .text-place-input::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    background-image: url(../img/ICONS.svg#icon-warning);
+   }
+
+   .text-place-input:invalid {
+    border: 1px solid tomato;
+    /* background-image: url(../img/ICONS.svg#icon-warning); */
+   }
+
+   .text-place-input:valid {
+    border: 1px solid green;
+    /* background-image: url(../img/ICONS.svg#icon-checkmark); */
+   }
+
 
 
 
    .text-field {
     position: relative;
-    
-    /* margin-bottom: 20px;
-    padding: 10px;
+    margin-bottom: 20px;
+    /* padding: 10px;
     border: 1px solid #000;
     border-radius: 10px; */
    }
@@ -137,6 +157,22 @@ img {
     height: 25px;
     transform: translateY(-50%);
    }
+
+
+.send-btn {
+  background-color: #bcbcbc;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: color 300ms ease-in, background-color 300ms ease-in ;
+}
+
+.send-btn:hover {
+  color: #FFF;
+  background-color: #985ACE;;
+}
+
+
+
 
 
    .box {
