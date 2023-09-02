@@ -84,14 +84,6 @@ img {
     color: #bcbcbc; 
    }
 
-   .text-place-input::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 10px; 
-    transform: translateY(-50%);
-    background-image: url(../img/ICONS.svg#icon-warning);
-   }
 
    .text-place-input:invalid {
     border: 1px solid tomato;
@@ -128,6 +120,7 @@ img {
    }
 
    .text-field-input {
+    position: relative;
     width: 100%;
     padding: 10px;
     border: 1px solid #000;
@@ -147,16 +140,28 @@ img {
     top: 0;
     font-size: 10px;  
     color: #bcbcbc;  
+    
    }
 
-   .text-field-icon {
+   .text-field-input::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50px; 
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    background-image: url(../img/ICONS.svg#icon-warning);
+   }
+
+   /* .text-field-icon {
     position: absolute;
     top: 50%;
     right: 20px;
     width: 25px;
     height: 25px;
     transform: translateY(-50%);
-   }
+   } */
 
 
 .send-btn {
