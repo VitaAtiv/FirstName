@@ -259,15 +259,19 @@ img {
 
 
 .send-btn {
-  background-color: #bcbcbc;
-  border: 1px solid transparent;
+  padding: 2px 7px;
+  font-size: 20px;
+  color: #985ACE;
+  background-color: #fff;
+  border: 2px solid #985ACE;
   border-radius: 3px;
+  cursor: pointer;
   transition: color 300ms ease-in, background-color 300ms ease-in ;
 }
 
 .send-btn:hover {
   color: #FFF;
-  background-color: #985ACE;;
+  background-color: #985ACE;
 }
 
 
