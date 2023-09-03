@@ -87,6 +87,7 @@ img {
 
    .text-place-input:invalid {
     border: 1px solid tomato;
+    background-image: url(../img/ICONS.svg#icon-warning);
     /* background-image: url(../img/ICONS.svg#icon-warning); */
    }
 
@@ -130,6 +131,7 @@ img {
 
    .text-field-input:invalid {
     border: 1px solid tomato;
+    
    }
 
    .text-field-input:valid {
@@ -155,7 +157,9 @@ img {
     background-color: #ff0000;
    } */
 
-   .text-field::after {
+
+   .text-field-input:invalid ~ .text-field::before
+   {
     content: "";
     position: absolute;
     top: 50%;
@@ -164,7 +168,21 @@ img {
     height: 25px;
     transform: translateY(-50%);
     background-image: url(../img/ICONS.svg#icon-warning);
+    
     background-color: #ff0000;
+   }
+
+   .text-field-input:valid ~ .text-field::after
+   {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 25px; 
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    background-image: url(../img/ICONS.svg#icon-checkmark);
+    background-color: green;
    }
 
    /* .text-field-icon {
