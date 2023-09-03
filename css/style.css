@@ -73,7 +73,7 @@ img {
    .text-place-input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #000;
+    border: 2px solid #000;
     border-radius: 8px;
     outline: none;
     transition: border 300ms ease-in;
@@ -85,7 +85,7 @@ img {
     color: #bcbcbc; 
    }
 
-   .text-place-icon {
+   .text-place-icon.warning {
     position: absolute;
     top: 50%;
     right: 20px;
@@ -93,12 +93,29 @@ img {
     height: 25px;
     transform: translateY(-50%);
     opacity: 0;
-    transition: opacity 300ms ease-in;
+    transition: opacity 100ms ease-in;
+   }
+
+   .text-place-icon.checkmark {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 100ms ease-in;
    }
 
    .text-place-input:focus {
-    border: 1px solid tomato;
+    border: 2px solid tomato;
     
+   }
+   .text-place-input:focus ~ .text-place-icon.warning {
+    opacity: 1;
+   }
+   .text-place-input:valid ~ .text-place-icon.warning {
+    opacity: 0;
    }
 
    .indication-place,
@@ -116,13 +133,14 @@ img {
    } */
 
    .text-place-input:valid {
-    border: 1px solid green;
+    border: 2px solid green;
     
    }
 
-   .text-place-input:valid ~ .text-place-icon {
+   .text-place-input:valid ~ .text-place-icon.checkmark {
     opacity: 1;
    }
+  
   
 
 
@@ -151,12 +169,12 @@ img {
     position: relative;
     width: 100%;
     padding: 10px;
-    border: 1px solid #000;
+    border: 2px solid #000;
     border-radius: 8px;
     outline: none;
    }
 
-   .text-field-icon {
+   .text-field-icon.warning {
     position: absolute;
     top: 50%;
     right: 20px;
@@ -164,16 +182,27 @@ img {
     height: 25px;
     transform: translateY(-50%);
     opacity: 0;
-    transition: opacity 300ms ease-in;
+    transition: opacity 100ms ease-in;
+   }
+
+   .text-field-icon.checkmark {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 100ms ease-in;
    }
 
    .text-field-input:focus {
-    border: 1px solid tomato;
+    border: 2px solid tomato;
     
    }
 
    .text-field-input:valid {
-    border: 1px solid green;
+    border: 2px solid green;
    }
 
 
@@ -184,14 +213,16 @@ img {
     
    }
 
-   .text-field-input:focus ~ .text-field-icon {
+   .text-field-input:focus ~ .text-field-icon.warning {
     opacity: 1;
    }
  
-   .text-field-input:valid ~ .text-field-icon {
+   .text-field-input:valid ~ .text-field-icon.warning {
     opacity: 0;
    }
- 
+   .text-field-input:valid ~ .text-field-icon.checkmark {
+    opacity: 1;
+   }
 
 
 /* 
