@@ -84,16 +84,30 @@ img {
     color: #bcbcbc; 
    }
 
+   .text-place-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+   }
+
 
    .text-place-input:invalid {
     border: 1px solid tomato;
-    background-image: url(../img/ICONS.svg#icon-warning);
-    /* background-image: url(../img/ICONS.svg#icon-warning); */
+    
    }
 
    .text-place-input:valid {
     border: 1px solid green;
-    /* background-image: url(../img/ICONS.svg#icon-checkmark); */
+    
+   }
+
+   .text-place-input:valid ~ .text-place-icon {
+    opacity: 1;
    }
 
 
@@ -112,11 +126,10 @@ img {
      top: 50%;
     left: 13px;
     transform: translateY(-50%);
-   padding: 0 5px;
+    padding: 0 5px;
     font-size: 16px;
     color: #5e5d5d;
     background-color: #fff;
-    
     transition: top 100ms ease-in, font-size 100ms ease-in, color 100ms ease-in; 
    }
 
@@ -127,6 +140,17 @@ img {
     border: 1px solid #000;
     border-radius: 8px;
     outline: none;
+   }
+
+   .text-field-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 300ms ease-in;
    }
 
    .text-field-input:invalid {
@@ -145,6 +169,11 @@ img {
     
    }
 
+   .text-field-input:invalid ~ .text-field-icon {
+    opacity: 1;
+   }
+
+
    /* .text-field-input:invalid + .text-field-input::after {
     content: "";
     position: absolute;
@@ -157,7 +186,7 @@ img {
     background-color: #ff0000;
    } */
 
-
+/* 
    .text-field-input:invalid ~ .text-field::before
    {
     content: "";
@@ -183,16 +212,9 @@ img {
     transform: translateY(-50%);
     background-image: url(../img/ICONS.svg#icon-checkmark);
     background-color: green;
-   }
-
-   /* .text-field-icon {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    width: 25px;
-    height: 25px;
-    transform: translateY(-50%);
    } */
+
+  
 
 
 .send-btn {
