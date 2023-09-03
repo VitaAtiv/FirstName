@@ -76,6 +76,7 @@ img {
     border: 1px solid #000;
     border-radius: 8px;
     outline: none;
+    transition: border 300ms ease-in;
    }
 
    .text-place-input:not(:placeholder-shown) + .text-place-label {
@@ -95,11 +96,16 @@ img {
     transition: opacity 300ms ease-in;
    }
 
-
-   .text-place-input:invalid {
+   .text-place-input:focus {
     border: 1px solid tomato;
     
    }
+
+
+   /* .text-place-input:invalid {
+    border: 1px solid tomato;
+    
+   } */
 
    .text-place-input:valid {
     border: 1px solid green;
