@@ -143,7 +143,7 @@ img {
     
    }
 
-   .text-field-input::after {
+   /* .text-field-input:invalid + .text-field-input::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -152,6 +152,19 @@ img {
     height: 25px;
     transform: translateY(-50%);
     background-image: url(../img/ICONS.svg#icon-warning);
+    background-color: #ff0000;
+   } */
+
+   .text-field::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 25px; 
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    background-image: url(../img/ICONS.svg#icon-warning);
+    background-color: #ff0000;
    }
 
    /* .text-field-icon {
