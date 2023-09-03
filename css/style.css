@@ -107,7 +107,8 @@ img {
     transition: opacity 100ms ease-in;
    }
 
-   .text-place-input:focus {
+   .text-place-input:focus,
+   .text-place-input:hover {
     border: 2px solid tomato;
     
    }
@@ -196,7 +197,8 @@ img {
     transition: opacity 100ms ease-in;
    }
 
-   .text-field-input:focus {
+   .text-field-input:focus,
+   .text-field-input:hover {
     border: 2px solid tomato;
     
    }
